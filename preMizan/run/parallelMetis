@@ -1,0 +1,11 @@
+if [ $# -ne 4 ]
+then
+	echo $?
+	echo "Command error, input format = $0 [local_graph_path] [partition size] [HDFS_graph_path] [MPI_PROCESSORS]"
+	exit -1
+fi
+
+mpirun -np $4 -f ~/bin/machines rm $1
+mpirun -np $4 -f ~/bin/machines hadoop dfs -get $3 $1
+mpirun -np $4 -f ~/bin/machines parmetis $1 1 $2 0 0 2 101785
+mv $1.part $1.part.$2

@@ -1,0 +1,21 @@
+***** Version 0.1b *****
+Release Date: March-8-2013
+Notes: Initial public version1
+
+
+***** Version 0.1b Update 1 *****
+Release Date: April-10-2013
+Notes:
+	1- Synchronizing user aggregator functions after Isuperstep.initialize()
+	2- Fixing memory leaks from array data structures
+	3- Fixing vertex state to correctly be active after voteToHalt
+	4- Fixing Global out messages counter
+
+***** Version 0.2b Update 1 *****
+Release Date:
+Notes:
+	1- Fixing argumentParser
+	2- Adding PageRank Example
+	3- Cleaning up some comments
+	4- Adding support for edge reading
+	5- Fixing Mizan.h from unsynchronized termination caused by LateStat
